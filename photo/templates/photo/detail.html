@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %} -Detail {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-2"></div> <!-- 공백 만듦-->
+    <div class="col-md-8" panel panel-default>
+        <p><img src="{{object.photo.url}}" style="width:100%;"></p>
+        <button type="button" class="btn btn-xs bin-info">
+                {{object.author.username}}</button>
+        <p style="background-color:orange;">{{object.text|linebreaksbr}}</p>
+
+        <a href="{% url 'photo:photo_delete' pk=object.id %}"
+               class="btn btn-outline-danger btn-lg float-right">
+                DELETE
+        </a>
+        <a href="{% url 'photo:photo_update' pk=object.id %}"
+                class="btn btn-outline-success btn-lg float-right">
+                UPDATE
+        </a>
+    </div>
+
+    <div class="col-md-5"><br><br></div>
+</div>
+
+<!--댓글 위치-->
+    <div class="row">
+        <div class="col-md-8 panel panel-default">
+            {% load disqus_tags %}
+            {% disqus_show_comments %}
+        </div>
+    </div>
+
+<div class="col-md-5"><br><br></div>
+{% endblock %}
