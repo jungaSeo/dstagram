@@ -120,10 +120,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-AWS_ACCESS_KEY_ID = 'AKIAU2X7VKQ3RIQ44YEU'
-AWS_SECRET_ACCESS_KEY = 'P18gbAPrVvMM1isiPY80zy6EA6Jnejb/1reQ0Gda'
-AWS_REGION ='ap-northeast-2'
-AWS_STORAGE_BUCKET_NAME = 'dstagram123123123123123'
+AWS_ACCESS_KEY_ID = 'your key'
+AWS_SECRET_ACCESS_KEY = 'your secret_access_key'
+AWS_REGION ='abababab'
+AWS_STORAGE_BUCKET_NAME = 'ggggg'
 AWS_S3_CUSTOM_DOMAIN ='%s.s3.%s.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME, AWS_REGION)
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl' : 'max-age=86400',
